@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
       # Create the session
       session[:user_id] = auth.uid
    
-      render :text => "Welcome #{auth.uid}! <br> claims: #{auth_hash["extra"]["raw_info"].to_yaml}"
+      render :text => "Welcome #{auth.uid}! <br> claims: #{auth_hash["extra"]["raw_info"].to_html}"
     end
   end  
 
